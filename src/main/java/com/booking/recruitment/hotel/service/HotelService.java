@@ -10,4 +10,11 @@ public interface HotelService {
   List<Hotel> getHotelsByCity(Long cityId);
 
   Hotel createNewHotel(Hotel hotel);
+
+  Hotel getHotelById(Long id);
+
+  String deleteHotel(Long id);
+
+  List<Hotel> searchHotelByCityTop3Distance(Long cityId);
+
 }

@@ -29,4 +29,17 @@ public class HotelController {
   public Hotel createHotel(@RequestBody Hotel hotel) {
     return hotelService.createNewHotel(hotel);
   }
+
+  @GetMapping("/{id}")
+  @ResponseStatus(HttpStatus.OK)
+  public Hotel getHotelById(@PathVariable Long id){
+    return hotelService.getHotelById(id);
+  }
+
+  @DeleteMapping("/{id}")
+  @ResponseStatus(HttpStatus.OK)
+  public String deleteHotel(@PathVariable Long id){
+    return hotelService.deleteHotel(id);
+  }
+
 }
